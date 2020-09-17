@@ -1,3 +1,6 @@
+class TranslationNotFoundError(Exception):
+    pass
+
 class Database:
     """
     Here put any language you want in a dictionary with syntax `key: value'.
@@ -20,5 +23,8 @@ class Translation(object):
         runtimeDynamicData.currentlang = language
         def _(string):
             exec("database = Database.%s" % runtimeDynamicData.currentlang)
-            return database[string]
+            try:
+                return database[string]
+            except KeyError:
+                raise TranslationNotFoundError(string)
         return _
