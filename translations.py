@@ -6,8 +6,8 @@ class Database:
     Here put any language you want in a dictionary with syntax `key: value'.
     It's highly recommended to instead of editing the original strings, to edit the ones inside `en' so you dont have to change the keys later
     """
-    en = {'Sorry, but you're dumb.': 'Sorry, but you cannot speak.', 'baby': 'young person'}
-    fr = {'Sorry, but you're dumb.': 'Desole, mais tu ne peux pas parler.', 'bebe': 'personne jeune'}
+    en = {'Sorry, but youre dumb.': 'Sorry, but you cannot speak.', 'baby': 'young person'}
+    fr = {'Sorry, but youre dumb.': 'Desole, mais tu ne peux pas parler.', 'bebe': 'personne jeune'}
 
 class presetStaticData:
     """static data that wont change at runtime"""
